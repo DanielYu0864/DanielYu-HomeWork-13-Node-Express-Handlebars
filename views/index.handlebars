@@ -1,0 +1,27 @@
+<h1>Eat-Da-Buger!</h1>
+
+<ul class="not-devoured">
+    {{#each burgers}}
+        {{#unless devoured}}
+        <li>{{this.burger_name}}
+            <button class='change-devoured' data-id="{{id}}" data-devoured='{{devoured}}'>Devoured</button>
+        </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<ul class="devoured">
+    {{#each burgers}}
+        {{#if devoured}}
+        <li>{{this.burger_name}}</li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<form class="create-form">
+
+    <input type="text" id="bg" name="name">
+
+    <button type="submit">Submit</button>
+
+</form>
