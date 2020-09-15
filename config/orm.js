@@ -43,4 +43,4 @@ const orm = {
     }
 }
 
-module.exports = Orm;
+module.exports = orm;
