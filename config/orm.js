@@ -32,7 +32,7 @@ const orm = {
         WHERE id = ${ condition };
         `;
         // UPDATE burgers
-        // SET devoure = true
+        // SET devoured = true
         // WHERE id = ${ condition };
 
         db.query(queryString,(err, result) => {
