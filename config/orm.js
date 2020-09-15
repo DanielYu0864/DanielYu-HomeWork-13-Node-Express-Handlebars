@@ -2,18 +2,21 @@ const db = require('./connection.js');
 
 class Orm {
     constructor ()
-    selectAll(cb) {
-        let queryString = `SELECT * FROM burgers;`;
+    selectAll(table, cb) {
+        let queryString = `SELECT * FROM ${ table };`;
+                        // `SELECT * FROM burgers;`
         db.query(queryString, (err, result) => {
             if(err) throw err;
             cb(result);
         });
     };
-    insertOne(value, cb) {
+    insertOne(table, column, value, cb) {
         let queryString = `
-        INSERT INTO burgers (burger_name)
+        INSERT INTO ${ table } (${ column })
         VALUES (${ value });
         `;
+        // INSERT INTO burgers (burger_name)
+        // VALUES (value);
         console.log(queryString);
 
         db.query(queryString, (err, result) => {
@@ -22,14 +25,17 @@ class Orm {
             cb(result);
         });
     }
-    updateOne(condition, cb) {
+    updateOne(table, column, boolean, condition, cb) {
         let queryString = `
-        UPDATE burgers
-        SET devoure = true
-        WHERE id = ?;
+        UPDATE ${ table }
+        SET ${ column } = ${ boolean }
+        WHERE id = ${ condition };
         `;
+        // UPDATE burgers
+        // SET devoure = true
+        // WHERE id = ${ condition };
 
-        db.query(queryString, condition,(err, result) => {
+        db.query(queryString,(err, result) => {
             if(err) throw err;
 
             cb(result);
