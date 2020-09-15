@@ -1,16 +1,16 @@
 const db = require('./connection.js');
 
-class Orm {
-    constructor ()
-    selectAll(table, cb) {
+const orm = {
+
+    selectAll: function(table, cb) {
         let queryString = `SELECT * FROM ${ table };`;
                         // `SELECT * FROM burgers;`
         db.query(queryString, (err, result) => {
             if(err) throw err;
             cb(result);
         });
-    };
-    insertOne(table, column, value, cb) {
+    },
+    insertOne: function(table, column, value, cb) {
         let queryString = `
         INSERT INTO ${ table } (${ column })
         VALUES (${ value });
@@ -24,8 +24,8 @@ class Orm {
 
             cb(result);
         });
-    }
-    updateOne(table, column, boolean, condition, cb) {
+    },
+    updateOne: function(table, column, boolean, condition, cb) {
         let queryString = `
         UPDATE ${ table }
         SET ${ column } = ${ boolean }
