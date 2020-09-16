@@ -21,4 +21,24 @@ $(function() {
             }
         );
     });
+
+    $('.create-form').on('submit', function(eve) {
+        eve.preventDefault();
+
+        const newBurger = {
+            name: $('#bg').val().trim()
+        };
+        console.log(newBurger);
+
+        $.ajax('/api/burgers', {
+            type: 'POST',
+            data: newBurger
+        })
+        .then(
+            function() {
+                console.log('Add new burger');
+                location.reload();
+            }
+        );
+    });
 });

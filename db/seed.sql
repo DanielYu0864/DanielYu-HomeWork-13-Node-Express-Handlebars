@@ -7,5 +7,5 @@ VALUES ('Bison Burger', true);
 SELECT * FROM burgers;
 
 UPDATE burgers
-SET devoure = true
+SET devoured = true
 WHERE id = 1;

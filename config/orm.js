@@ -13,7 +13,7 @@ const orm = {
     insertOne: function(table, column, value, cb) {
         let queryString = `
         INSERT INTO ${ table } (${ column })
-        VALUES (${ value });
+        VALUES ('${ value }');
         `;
         // INSERT INTO burgers (burger_name)
         // VALUES (value);
