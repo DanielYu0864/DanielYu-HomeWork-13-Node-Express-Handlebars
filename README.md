@@ -29,8 +29,8 @@ MySQL
 ```
 
 ## About
-* Heroku link:
-* Project Github:
+* Heroku link: https://homework-13-node-exphbs.herokuapp.com/
+* Project Github: https://github.com/DanielYu0864/DanielYu-HomeWork-13-Node-Express-Handlebars
 * Author: [`DanielYu0864`](https://github.com/DanielYu0864)
 
 ## Questions
