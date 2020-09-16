@@ -1,24 +1,32 @@
 <h1>Eat-Da-Buger!</h1>
 
-<ul class="not-devoured">
+<img class='burger-img' src="/assets/img/burger.jpg" alt="" srcset="">
+
+
+<div class="burger-list">
+    <ul class="not-devoured">
     {{#each burgers}}
         {{#unless devoured}}
-        <li>{{this.burger_name}}
-            <button class='change-devoured' data-id="{{id}}" data-devoured='{{devoured}}'>Devoured</button>
+        <li>
+            {{this.burger_name}}
         </li>
+            <button class='change-devoured' data-id="{{id}}" data-devoured='{{devoured}}'>Devoured</button>
+        <br>
         {{/unless}}
     {{/each}}
-</ul>
+    </ul>
 
-<ul class="devoured">
-    {{#each burgers}}
-        {{#if devoured}}
-        <li>{{this.burger_name}}</li>
-        {{/if}}
-    {{/each}}
-</ul>
+    <ul class="devoured">
+        {{#each burgers}}
+            {{#if devoured}}
+            <li>{{this.burger_name}}</li>
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
-<form class="create-form">
+
+<form class="create-from">
 
     <input type="text" id="bg" name="name">
 

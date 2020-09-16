@@ -22,7 +22,7 @@ $(function() {
         );
     });
 
-    $('.create-form').on('submit', function(eve) {
+    $('.create-from').on('submit', function(eve) {
         eve.preventDefault();
 
         const newBurger = {
