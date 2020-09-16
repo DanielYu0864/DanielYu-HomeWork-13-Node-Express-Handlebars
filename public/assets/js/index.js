@@ -5,7 +5,12 @@ $(function() {
         console.log(this);
         console.log(devoured);
         console.log(id);
-        devoured = 1;
+        if(devoured === 0) {
+            devoured = 1;
+        } else {
+            devoured = 0;
+        }
+
         const devourState = {
             devoured: devoured
         };

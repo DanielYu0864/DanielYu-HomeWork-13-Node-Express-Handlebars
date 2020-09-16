@@ -20,8 +20,12 @@
     <ul class="devoured">
         {{#each burgers}}
             {{#if devoured}}
-            <li>{{this.burger_name}}</li>
+            <li>
+                {{this.burger_name}}
+                <button class='change-devoured' data-id="{{id}}" data-devoured='{{devoured}}'>Make burger</button>
+            </li>
             {{/if}}
+
         {{/each}}
     </ul>
 </div>

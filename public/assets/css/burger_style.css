@@ -43,8 +43,8 @@ button {
 }
 
 .not-devoured {
-    margin-right: 10vw;
-    margin-left: -10vw;
+    margin-right: 7vw;
+    margin-left: -7vw;
 }
 
 .not-devoured li{
@@ -55,7 +55,8 @@ button {
 }
 
 .devoured {
-    margin-left: 10px;
+    margin-left: 7vw;
+    margin-right: -7vw;
 }
 
 .devoured li {
@@ -63,8 +64,16 @@ button {
     color: burlywood;
 }
 
+.devoured button {
+    background-color: hsl(5,50%,40%);
+    font-size: 10px;
+    height: auto;
+    width: auto;
+}
+
 .create-from {
     margin-top: 5vh;
+    margin-bottom: 5vh;
     text-align: center;
 }
 
