@@ -76,3 +76,7 @@ button {
 .create-from button {
     background-color: hsl(200,50%,40%);
 }
+
+.create-from p {
+    font-size: 15px;
+}
