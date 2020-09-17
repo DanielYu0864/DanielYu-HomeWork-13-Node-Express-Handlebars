@@ -14,15 +14,15 @@
 ### Usage
 1. Add new burger
 
-
+![add](./assets/gif/add.gif)
 
 2. Devour !
 
-
+![devoured](./assets/gif/devoured.gif)
 
 3. Make the burger
 
-
+![make](./assets/gif/make.gif)
 
 ### Language
 ```md
