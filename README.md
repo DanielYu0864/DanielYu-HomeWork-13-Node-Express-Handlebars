@@ -8,16 +8,19 @@
 
 ### Project Description
 
-
-
-
-
-### Install
-```md
-npm install
-```
+* A sample full-stack application that user can add their favorite burger, then devour or make them
+* The application builds on MySQL as the model, express.js as the controller, and Handlebars as view
 
 ### Usage
+1. Add new burger
+
+
+
+2. Devour !
+
+
+
+3. Make the burger
 
 
 
@@ -25,7 +28,9 @@ npm install
 ```md
 Javascrpit
 Node.js
+Express-Handlebars
 MySQL
+JawsDB MySQL
 ```
 
 ## About
